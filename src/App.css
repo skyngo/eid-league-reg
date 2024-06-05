@@ -1,0 +1,99 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #252525;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #625D57;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.header {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+}
+.container {
+  margin-top: 30px;
+  width: 90vw;
+}
+.input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label  {
+  color: #d2d2d2;
+}
+:where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.player-label {
+  font-size: large;
+  font-weight: bold;
+  color: #ffffff;
+  width: 100vw;
+}
+
+.button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #000000;
+}
+button:hover {
+  background-color: #252525;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .column {
+    flex-wrap: wrap;
+  }
+}
