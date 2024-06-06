@@ -206,7 +206,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={10}
                 />
               </div>
             </div>
@@ -257,7 +257,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={10}
                 />
               </div>
             </div>
@@ -307,7 +307,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={10}
                 />
               </div>
             </div>
@@ -357,7 +357,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={10}
                 />
               </div>
             </div>
