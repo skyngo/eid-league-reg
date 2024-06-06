@@ -53,6 +53,7 @@ const Home = () => {
             "https://api.sky.ngo/create",
             userField
           );
+          console.log(response)
           Swal.fire({
             title: "Registration",
             text: "We have received the form, We will be in touch soon",
