@@ -1,27 +1,17 @@
-import './App.css';
-// import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './components/Home';
-import List from './components/List'
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />
-  },
-  {
-    path: "/admin",
-    element: <List />
-  }
-])
+import "./App.css";
+import { Route, Routes, BrowserRouter as Router, } from "react-router-dom";
+import Home from "./components/Home";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="*" element={<PageNotFound />}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Home = () => {
   const [userField, setUserField] = useState({
@@ -31,43 +32,74 @@ const Home = () => {
       ...userField,
       [e.target.name]: e.target.value,
     });
-    console.log(userField);
+    // console.log(userField);
   };
   const [loading, setLoading] = useState();
 
   const onSubmitChange = async (e) => {
     e.preventDefault();
-    try {
-      const responce = await axios.post(
-        "https://api.sky.ngo/create",
-        userField
-      );
-      console.log(responce);
-      setLoading(true);
-    } catch (err) {
-      console.log("Something Wrong");
-    }
-  };
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to edit this later!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, submit it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const response = await axios.post(
+            "https://api.sky.ngo/create",
+            userField
+          );
+          Swal.fire({
+            title: "Registration",
+            text: "We have received the form, We will be in touch soon",
+            icon: "success",
+          });
+          setLoading(true);
+        } catch (error) {
+          console.log(error, "Something Wrong");
+          Swal.fire({
+            title: "Oops...",
+            text: "Please Fill all the Fields Correctly",
+            icon: "error",
+          });
+        }
+      }
+    });
+  }
+  //   try {
+  //     // const response = await axios.post(
+  //     //   "https://api.sky.ngo/create",
+  //     //   userField
+  //     // );
+  //     // Swal.fire({
+  //     //   title: "Registration Successful",
+  //     //   text: "",
+  //     //   icon: "success",
+  //     // });
+  //     // setLoading(true);
+  //   } catch (err) {
+  //     console.log(err, "Something Wrong");
+  //     Swal.fire({
+  //       title: "Oops...",
+  //       text: "Please Fill all the Fields Correctly",
+  //       icon: "error",
+  //     });
+  //   }
+  // };
   if (loading) {
     return <Home />;
   }
 
   return (
     <div className="container">
-      <h2 className="header">Registeration Form</h2>
+      <h2 className="header">
+        SKY PUBGM <br /> Eid League S1 Registration
+      </h2>
       <form>
-        {/* <div className="mb-3 mt-3">
-                                <label className="form-label"> Full Name:</label>
-                                <input type="text" className="form-control" id="name" placeholder="Enter Your Full Name" name="name" onChange={e => changeUserFieldHandler(e)} />
-                            </div>
-                            <div className="mb-3 mt-3">
-                                <label className="form-label">Email:</label>
-                                <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" onChange={e => changeUserFieldHandler(e)} required/>
-                            </div>
-                            <div className="mb-3 mt-3">
-                                <label className="form-label">Phone Number:</label>
-                                <input type="text" className="form-control" id="phone_number" placeholder="Enter Phone Number" name="phone_number" onChange={e => changeUserFieldHandler(e)} required/>
-                            </div> */}
         <div class="input-box">
           <label>Team Name</label>
           <input
@@ -98,6 +130,7 @@ const Home = () => {
             placeholder="Enter NID number"
             required
             onChange={(e) => changeUserFieldHandler(e)}
+            maxLength={6}
           />
         </div>
 
@@ -109,12 +142,14 @@ const Home = () => {
             placeholder="Enter IGL viber number"
             required
             onChange={(e) => changeUserFieldHandler(e)}
+            maxLength={7}
           />
         </div>
 
         <div class="input-box">
-          <label>Email Address</label>
+          <label for="email">Email Address</label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="Enter email address"
@@ -145,6 +180,7 @@ const Home = () => {
                 placeholder="Enter NID"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={6}
               />
             </div>
           </div>
@@ -167,6 +203,7 @@ const Home = () => {
                 placeholder="PUBG ID Number"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={8}
               />
             </div>
           </div>
@@ -194,6 +231,7 @@ const Home = () => {
                 placeholder="Enter NID"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={6}
               />
             </div>
           </div>
@@ -216,6 +254,7 @@ const Home = () => {
                 placeholder="PUBG ID Number"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={8}
               />
             </div>
           </div>
@@ -242,6 +281,7 @@ const Home = () => {
                 placeholder="Enter NID"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={6}
               />
             </div>
           </div>
@@ -264,6 +304,7 @@ const Home = () => {
                 placeholder="PUBG ID Number"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={8}
               />
             </div>
           </div>
@@ -290,6 +331,7 @@ const Home = () => {
                 placeholder="Enter NID"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={6}
               />
             </div>
           </div>
@@ -312,6 +354,7 @@ const Home = () => {
                 placeholder="PUBG ID Number"
                 required
                 onChange={(e) => changeUserFieldHandler(e)}
+                maxLength={8}
               />
             </div>
           </div>
