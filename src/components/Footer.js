@@ -17,7 +17,7 @@ const Footer = () => {
       >
         <ul>
           <li style={{ fontWeight: "600" }}>DM on viber for more Info</li>
-          <li style={{ fontWeight: "300", letterSpacing: "4px" }}>
+          <li className="footerNumber" style={{ fontWeight: "300", letterSpacing: "4px" }}>
             +960 7569695 | +960 7665552
           </li>
           <li style={{ fontWeight: "200", marginTop: '5vh', fontSize: '0.8rem' }}>
