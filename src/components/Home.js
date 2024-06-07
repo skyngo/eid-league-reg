@@ -33,7 +33,6 @@ const Home = () => {
       ...userField,
       [e.target.name]: e.target.value,
     });
-    // console.log(userField);
   };
   const [loading, setLoading] = useState();
 
@@ -109,7 +108,7 @@ const Home = () => {
           <div class="input-box">
             <label>Viber Number</label>
             <input
-              type="text"
+              type="number"
               name="viber_number"
               placeholder="Enter IGL viber number"
               required
@@ -172,7 +171,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p1_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -224,7 +223,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p2_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -275,7 +274,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p3_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -326,7 +325,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p4_igid"
                   placeholder="PUBG ID Number"
                   required

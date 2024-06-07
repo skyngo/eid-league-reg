@@ -18,6 +18,14 @@ body {
   /* background-color: #2E3192; */
 }
 
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
