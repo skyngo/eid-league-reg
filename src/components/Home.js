@@ -224,7 +224,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p2_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -275,7 +275,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p3_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -326,10 +326,58 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="text"
+                  type="number"
                   name="p4_igid"
                   placeholder="PUBG ID Number"
                   required
+                  onChange={(e) => changeUserFieldHandler(e)}
+                  maxLength={12}
+                />
+              </div>
+            </div>
+          </div>
+          <h2 className="sub-header">
+            Substitute Player
+          </h2>
+          <div class="player-reg-container">
+            <div class="column">
+              <div class="input-box">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="sub_fullname"
+                  placeholder="Enter full name"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
+              </div>
+              <div class="input-box">
+                <label>NID Number</label>
+                <input
+                  type="text"
+                  name="sub_nid"
+                  placeholder="Enter NID"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                  maxLength={7}
+                  minLength={7}
+                />
+              </div>
+            </div>
+            <div class="column">
+              <div class="input-box">
+                <label>In-Game Name</label>
+                <input
+                  type="text"
+                  name="sub_ign"
+                  placeholder="Enter In-Game Name"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
+              </div>
+              <div class="input-box">
+                <label>Game ID</label>
+                <input
+                  type="number"
+                  name="sub_igid"
+                  placeholder="PUBG ID Number"
                   onChange={(e) => changeUserFieldHandler(e)}
                   maxLength={12}
                 />
