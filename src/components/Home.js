@@ -43,7 +43,6 @@ const Home = () => {
       const response = await axios.post(
         "https://api.sky.ngo/create",
         userField,
-        console.log(response)
       );
       Swal.fire({
         title: "Registration Successful",
@@ -51,6 +50,7 @@ const Home = () => {
         icon: "success",
       });
       setLoading(true);
+      console.log(response)
     } catch (err) {
       console.log(err, "Something Wrong");
       Swal.fire({
