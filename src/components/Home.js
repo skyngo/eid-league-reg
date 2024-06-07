@@ -101,6 +101,7 @@ const Home = () => {
               required
               onChange={(e) => changeUserFieldHandler(e)}
               maxLength={7}
+              maxLength={7}
             />
           </div>
 
@@ -150,6 +151,7 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
+                  maxLength={7}
                   maxLength={7}
                 />
               </div>
@@ -202,6 +204,7 @@ const Home = () => {
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
                   maxLength={7}
+                  maxLength={7}
                 />
               </div>
             </div>
@@ -252,6 +255,7 @@ const Home = () => {
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
                   maxLength={7}
+                  maxLength={7}
                 />
               </div>
             </div>
@@ -301,6 +305,7 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
+                  maxLength={7}
                   maxLength={7}
                 />
               </div>
