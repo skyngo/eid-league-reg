@@ -332,7 +332,7 @@ const Home = () => {
           </div>
 
           <br />
-          <header>Substitutes (optional)</header>
+          {/* <header>Substitutes (optional)</header>
           <div class="player-reg-container">
             <br />
             <label class="player-label">Sub Player 1</label>
@@ -421,7 +421,7 @@ const Home = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
           <button
             type="submit"
             className="button"
