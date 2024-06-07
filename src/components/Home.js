@@ -43,6 +43,7 @@ const Home = () => {
       const response = await axios.post(
         "https://api.sky.ngo/create",
         userField,
+        console.log(response)
       );
       Swal.fire({
         title: "Registration Successful",
@@ -101,7 +102,6 @@ const Home = () => {
               required
               onChange={(e) => changeUserFieldHandler(e)}
               maxLength={7}
-              maxLength={7}
             />
           </div>
 
@@ -151,7 +151,6 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={7}
                   maxLength={7}
                 />
               </div>
@@ -204,7 +203,6 @@ const Home = () => {
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
                   maxLength={7}
-                  maxLength={7}
                 />
               </div>
             </div>
@@ -255,7 +253,6 @@ const Home = () => {
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
                   maxLength={7}
-                  maxLength={7}
                 />
               </div>
             </div>
@@ -305,7 +302,6 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={7}
                   maxLength={7}
                 />
               </div>
