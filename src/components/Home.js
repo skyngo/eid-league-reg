@@ -59,6 +59,7 @@ const Home = () => {
       });
     }
   };
+
   if (loading) {
     return <Home />;
   }
@@ -108,13 +109,12 @@ const Home = () => {
           <div class="input-box">
             <label>Viber Number</label>
             <input
-              type="number"
+              type="text"
               name="viber_number"
               placeholder="Enter IGL viber number"
               required
               onChange={(e) => changeUserFieldHandler(e)}
               maxLength={7}
-              minLength={7}
             />
           </div>
 
@@ -223,7 +223,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="number"
+                  type="text"
                   name="p2_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -274,7 +274,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="number"
+                  type="text"
                   name="p3_igid"
                   placeholder="PUBG ID Number"
                   required
@@ -325,7 +325,7 @@ const Home = () => {
               <div class="input-box">
                 <label>Game ID</label>
                 <input
-                  type="number"
+                  type="text"
                   name="p4_igid"
                   placeholder="PUBG ID Number"
                   required
