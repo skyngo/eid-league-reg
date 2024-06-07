@@ -337,7 +337,7 @@ const Home = () => {
             </div>
           </div>
           <h2 className="sub-header">
-            Substitute Player
+            Substitute Player (Optional)
           </h2>
           <div class="player-reg-container">
             <div class="column">
