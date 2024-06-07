@@ -39,59 +39,26 @@ const Home = () => {
 
   const onSubmitChange = async (e) => {
     e.preventDefault();
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to edit this later!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, submit it!",
-    }).then(async (result) => {
-      if (result.isConfirmed) {
-        try {
-          const response = await axios.post(
-            "https://api.sky.ngo/create",
-            userField
-          );
-          console.log(response);
-          Swal.fire({
-            title: "Registration",
-            text: "We have received the form, We will be in touch soon",
-            icon: "success",
-          });
-          setLoading(true);
-        } catch (error) {
-          console.log(error, "Something Wrong");
-          Swal.fire({
-            title: "Oops...",
-            text: "Please Fill all the Fields Correctly",
-            icon: "error",
-          });
-        }
-      }
-    });
+    try {
+      const response = await axios.post(
+        "https://api.sky.ngo/create",
+        userField,
+      );
+      Swal.fire({
+        title: "Registration Successful",
+        text: "",
+        icon: "success",
+      });
+      setLoading(true);
+    } catch (err) {
+      console.log(err, "Something Wrong");
+      Swal.fire({
+        title: "Oops...",
+        text: "Please Fill all the Fields Correctly",
+        icon: "error",
+      });
+    }
   };
-  //   try {
-  //     // const response = await axios.post(
-  //     //   "https://api.sky.ngo/create",
-  //     //   userField
-  //     // );
-  //     // Swal.fire({
-  //     //   title: "Registration Successful",
-  //     //   text: "",
-  //     //   icon: "success",
-  //     // });
-  //     // setLoading(true);
-  //   } catch (err) {
-  //     console.log(err, "Something Wrong");
-  //     Swal.fire({
-  //       title: "Oops...",
-  //       text: "Please Fill all the Fields Correctly",
-  //       icon: "error",
-  //     });
-  //   }
-  // };
   if (loading) {
     return <Home />;
   }
@@ -133,7 +100,7 @@ const Home = () => {
               placeholder="Enter NID number"
               required
               onChange={(e) => changeUserFieldHandler(e)}
-              maxLength={6}
+              maxLength={7}
             />
           </div>
 
@@ -183,7 +150,7 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={6}
+                  maxLength={7}
                 />
               </div>
             </div>
@@ -206,7 +173,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={12}
                 />
               </div>
             </div>
@@ -234,7 +201,7 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={6}
+                  maxLength={7}
                 />
               </div>
             </div>
@@ -257,7 +224,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={12}
                 />
               </div>
             </div>
@@ -284,7 +251,7 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={6}
+                  maxLength={7}
                 />
               </div>
             </div>
@@ -307,7 +274,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={12}
                 />
               </div>
             </div>
@@ -334,7 +301,7 @@ const Home = () => {
                   placeholder="Enter NID"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={6}
+                  maxLength={7}
                 />
               </div>
             </div>
@@ -357,7 +324,7 @@ const Home = () => {
                   placeholder="PUBG ID Number"
                   required
                   onChange={(e) => changeUserFieldHandler(e)}
-                  maxLength={8}
+                  maxLength={12}
                 />
               </div>
             </div>
