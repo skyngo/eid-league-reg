@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Footer from "./Footer";
+import Loader from "./Loader";
 
 const Home = () => {
   const [userField, setUserField] = useState({
@@ -34,6 +35,7 @@ const Home = () => {
       [e.target.name]: e.target.value,
     });
   };
+
   const [loading, setLoading] = useState();
 
   const onSubmitChange = async (e) => {
@@ -61,7 +63,7 @@ const Home = () => {
   };
 
   if (loading) {
-    return <Home />;
+    return <Loader />;
   }
 
   return (
