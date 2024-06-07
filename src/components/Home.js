@@ -46,7 +46,7 @@ const Home = () => {
       );
       Swal.fire({
         title: "Registration Successful",
-        text: "We will be in touch",
+        text: "We will get in touch with you soon",
         icon: "success",
       });
       setLoading(true);
