@@ -42,7 +42,7 @@ const Home = () => {
     try {
       const response = await axios.post(
         "https://api.sky.ngo/create",
-        userField,
+        userField
       );
       Swal.fire({
         title: "Registration Successful",
@@ -50,7 +50,7 @@ const Home = () => {
         icon: "success",
       });
       setLoading(true);
-      console.log(response)
+      console.log(response);
     } catch (err) {
       console.log(err, "Something Wrong");
       Swal.fire({
@@ -332,87 +332,96 @@ const Home = () => {
           </div>
 
           <br />
-          {/* <header>Substitutes (optional)</header>
-            <div class="player-reg-container">
-              <br />
-              <label class="player-label">Player 1</label>
-              <div class="column">
-                <div class="input-box">
-                  <label>Full Name</label>
-                  <input
-                    type="text"
-                    name="f_name"
-                    placeholder="Enter full name"
-                    onChange={e => changeUserFieldHandler(e)}
-                  />
-                </div>
-                <div class="input-box">
-                  <label>NID Number</label>
-                  <input type="text" name="nid" placeholder="Enter NID" onChange={e => changeUserFieldHandler(e)}/>
-                </div>
+          <header>Substitutes (optional)</header>
+          <div class="player-reg-container">
+            <br />
+            <label class="player-label">Sub Player 1</label>
+            <div class="column">
+              <div class="input-box">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="sub1_fullname"
+                  placeholder="Enter full name"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
               </div>
-              <div class="column">
-                <div class="input-box">
-                  <label>In-Game Name</label>
-                  <input
-                    type="text"
-                    name="ign"
-                    placeholder="Enter In-Game Name"
-                    onChange={e => changeUserFieldHandler(e)}
-                  />
-                </div>
-                <div class="input-box">
-                  <label>Game ID</label>
-                  <input
-                    type="number"
-                    name="ig_id"
-                    placeholder="PUBG ID Number"
-                    onChange={e => changeUserFieldHandler(e)}
-                  />
-                </div>
+              <div class="input-box">
+                <label>NID Number</label>
+                <input
+                  type="text"
+                  name="sub1_nid"
+                  placeholder="Enter NID"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
               </div>
             </div>
-
-            <div class="player-reg-container">
-              <br />
-              <label class="player-label">Player 2</label>
-              <div class="column">
-                <div class="input-box">
-                  <label>Full Name</label>
-                  <input
-                    type="text"
-                    name="f_name"
-                    placeholder="Enter full name"
-                    onChange={e => changeUserFieldHandler(e)}
-                  />
-                </div>
-                <div class="input-box">
-                  <label>NID Number</label>
-                  <input type="text" name="nid" placeholder="Enter NID"onChange={e => changeUserFieldHandler(e)} />
-                </div>
+            <div class="column">
+              <div class="input-box">
+                <label>In-Game Name</label>
+                <input
+                  type="text"
+                  name="sub1_ign"
+                  placeholder="Enter In-Game Name"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
               </div>
-              <div class="column">
-                <div class="input-box">
-                  <label>In-Game Name</label>
-                  <input
-                    type="text"
-                    name="ign"
-                    placeholder="Enter In-Game Name"
-                    onChange={e => changeUserFieldHandler(e)}
-                  />
-                </div>
-                <div class="input-box">
-                  <label>Game ID</label>
-                  <input
-                    type="number"
-                    name="ig_id"
-                    placeholder="PUBG ID Number"
-                    onChange={e => changeUserFieldHandler(e)}
-                  />
-                </div>
+              <div class="input-box">
+                <label>Game ID</label>
+                <input
+                  type="number"
+                  name="sub1_igid"
+                  placeholder="PUBG ID Number"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
               </div>
-            </div> */}
+            </div>
+          </div>
 
+          <div class="player-reg-container">
+            <br />
+            <label class="player-label">Sub Player 2</label>
+            <div class="column">
+              <div class="input-box">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="sub2_fullname"
+                  placeholder="Enter full name"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
+              </div>
+              <div class="input-box">
+                <label>NID Number</label>
+                <input
+                  type="text"
+                  name="sub2_nid"
+                  placeholder="Enter NID"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
+              </div>
+            </div>
+            <div class="column">
+              <div class="input-box">
+                <label>In-Game Name</label>
+                <input
+                  type="text"
+                  name="sub2_ign"
+                  placeholder="Enter In-Game Name"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
+              </div>
+              <div class="input-box">
+                <label>Game ID</label>
+                <input
+                  type="number"
+                  name="sub2_igid"
+                  placeholder="PUBG ID Number"
+                  onChange={(e) => changeUserFieldHandler(e)}
+                />
+              </div>
+            </div>
+          </div>
           <button
             type="submit"
             className="button"
