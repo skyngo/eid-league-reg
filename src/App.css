@@ -110,6 +110,37 @@ input[type=number] {
 button:hover {
   background-color: #252525;
 }
+
+.loading-container {
+  align-items: center;
+  text-align: center;
+}
+
+.loader {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+#logo {
+  height: 500px;
+  width: 500px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
 /*Responsive*/
 @media screen and (max-width: 500px) {
   .column {
@@ -122,5 +153,16 @@ button:hover {
 
   .footerNumber {
     font-size: 0.8rem;
+  }
+
+  /* responsiveness for loader */
+  #logo {
+    height: 250px;
+    width: 250px;
+    stroke: "#707070";
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 8s ease;
   }
 }

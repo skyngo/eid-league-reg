@@ -1,18 +1,31 @@
 import "./App.css";
-import { Route, Routes, BrowserRouter as Router, } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
-import PageNotFound from "./components/PageNotFound";
+import SkyLoader from "./components/skyloader";
 
 function App() {
+  const [screenLoading, setScreenLoading] = useState(false);
+
+  useEffect(() => {
+    setScreenLoading(true);
+    setTimeout(() => {
+      setScreenLoading(false);
+    }, 3000);
+  }, []);
+
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="*" element={<PageNotFound />}/>
-        </Routes>
-      </Router>
-    </div>
+    <>
+      {screenLoading ? (
+        <SkyLoader />
+      ) : (
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 
