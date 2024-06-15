@@ -26,6 +26,10 @@ const Home = () => {
     p4_nid: "",
     p4_ign: "",
     p4_igid: "",
+    sub_fullname: "",
+    sub_nid: "",
+    sub_ign: "",
+    sub_igid: "",
   });
 
   const changeUserFieldHandler = (e) => {
